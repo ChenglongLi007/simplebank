@@ -142,9 +142,13 @@ func addMoney(
 		ID:     accountID1,
 		Amount: amount1,
 	})
+	if err != nil {
+		return
+	}
 
 	account2, err = q.AddAccountBalance(ctx, AddAccountBalanceParams{
 		ID:     accountID2,
 		Amount: amount2,
 	})
+	return
 }
