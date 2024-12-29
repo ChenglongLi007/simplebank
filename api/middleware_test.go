@@ -41,6 +41,12 @@ func TestAuthMiddleware(t *testing.T) {
 				require.Equal(t, http.StatusOK, recorder.Code)
 			},
 		},
+		// {
+		// 	name: "",
+		// 	setupAuth: func(t *testing.T, request *http.Request, tokenMaker token.Maker) {
+		// 		// Do not add authorization header
+		// 	},
+		// },
 	}
 
 	for i := range testCases {
